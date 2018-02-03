@@ -21,6 +21,14 @@
                 margin: 0;
             }
 
+            .img-ch{
+                width:15px;
+            }
+
+            .a-link:hover{
+                color: white;
+            }
+
             .title>*{
                 display: inline-block;
                 vertical-align: middle;
@@ -101,10 +109,10 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}"> <img src="{{asset('images/huella2.png')}}" class="img-logo img-ch" alt="logo"> Inicio</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
+                        <a href="{{ route('login') }}" class="a-link"> <img src="{{asset('images/huella2.png')}}" class="img-logo img-ch" alt="logo"> Ingresar</a>
+                        <a href="{{ route('register') }}" class="a-link"> <img src="{{asset('images/huella2.png')}}" class="img-logo img-ch" alt="logo"> Registrarse</a>
                     @endauth
                 </div>
             @endif
